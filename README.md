@@ -16,9 +16,6 @@ Gathers GPS data from a physical sensor and displays location information on a m
 * User dashboard: [Blynk.io](https://docs.blynk.cc/) app
 
 ![MT3339 GPS Sensor](img/IMG_2563-450px.jpg)
-![Raspberry Pi](img/placeholder-450px.jpg)
-![Raspberry Pi](img/placeholder-450px.jpg)
-![Blynk.io Dashboard](img/placeholder-450px.jpg)
 
 ### Notes
 Development currently in progress!</br>
