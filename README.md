@@ -1,5 +1,5 @@
 # GPSpi
-**A simple, end-to-end GPS location tracking system:**</br>
+**A simple, end-to-end, GPS location tracking system:**</br>
 Gathers GPS data from a physical sensor and displays location information on a mobile app dashboard.
 
 ### Software
@@ -21,4 +21,5 @@ Gathers GPS data from a physical sensor and displays location information on a m
 ![Blynk.io Dashboard](img/placeholder-450px.jpg)
 
 ### Notes
-Development currently in progress! Completion of MVP prototype expected by 31-Jul.
+Development currently in progress!</br>
+Completion of MVP prototype expected by 31-Jul.
