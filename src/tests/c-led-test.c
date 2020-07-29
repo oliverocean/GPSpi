@@ -1,4 +1,4 @@
-// gcc -o led led.c -lwiringPi -lcrypt -lpthread -lm
+// gcc -o led led.c -lwiringPi -lcrypt -lpthread -lrt -lm
 
 #include <wiringPi.h>
 #include <stdio.h>
@@ -15,7 +15,7 @@ int main (void)
 	wiringPiSetup();
 	pinMode(GpioPin, OUTPUT);
 
-	while (c < 4)
+	while (index < 4)
 	{
 		digitalWrite(GpioPin, HIGH);
 		printf("> led: on\n");
