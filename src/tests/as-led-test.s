@@ -1,7 +1,7 @@
-/* *
+/**
  * @author: Oliver Ocean <github@oliverocean.co>
  * @file: led.s
- *
+ * @compile: gcc -o foo foo.s -lwiringPi -lcrypt -lpthread -lm -lrt 
  */
 
 /* ---------------[ Text ]--------------- */
@@ -22,7 +22,7 @@ main:
 
 	// initialize while_loop 
 	mov x19, xzr         // loop counter
-	mov x20, 4   	    // max loops
+	mov x20, 5	    // max loops
 	b while_loop
 
 	b exit
@@ -33,8 +33,8 @@ while_loop:
 	bge exit_msg
 
 	// turn led on and pause
-	//adr x0, msg_led_on
-	//bl printf
+	adr x0, msg_led_on
+	bl printf
 	adr x0, gpio_pin
 	ldr w0, [x0]
 	adr x1, set_high
@@ -45,8 +45,8 @@ while_loop:
 	bl delay	    // delay(length)
 
 	// turn led off and pause
-	//adr x0, msg_led_off
-	//bl printf
+	adr x0, msg_led_off
+	bl printf
 	adr x0, gpio_pin
 	ldr w0, [x0]
 	adr x1, set_low
