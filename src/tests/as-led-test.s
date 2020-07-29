@@ -21,37 +21,43 @@ main:
 	bl pinMode          
 
 	// initialize while_loop 
-	mov x2, xzr         // loop counter
-	mov x3, 4   	    // max loops
+	mov x19, xzr         // loop counter
+	mov x20, 4   	    // max loops
 	b while_loop
 
 	b exit
 
 while_loop:
 	// compare to max
-	cmp x2, x3          
+	cmp x19, x20          
 	bge exit_msg
 
 	// turn led on and pause
-	adr x0, msg_led_on
-	bl printf
-	mov x0, gpio_pin
-	mov x1, set_high
+	//adr x0, msg_led_on
+	//bl printf
+	adr x0, gpio_pin
+	ldr w0, [x0]
+	adr x1, set_high
+	ldr w1, [x1]
 	bl digitalWrite     // digitalWrite(pin, value)
-	mov x0, time_delay  
+	adr x0, time_delay  
+	ldr w0, [x0]
 	bl delay	    // delay(length)
 
 	// turn led off and pause
-	mov x0, msg_led_off
-	bl printf
-	mov x0, gpio_pin
-	mov x1, set_low
+	//adr x0, msg_led_off
+	//bl printf
+	adr x0, gpio_pin
+	ldr w0, [x0]
+	adr x1, set_low
+	ldr w1, [x1]
 	bl digitalWrite     // digitalWrite(pin, value)
-	mov x0, time_delay  
+	adr x0, time_delay  
+	ldr w0, [x0]
 	bl delay	    // delay(length)
 
 	// increment counter and loop
-	add x2, x2, 1 	    
+	add x19, x19, 1 	    
 	b while_loop
 
 exit_msg:
