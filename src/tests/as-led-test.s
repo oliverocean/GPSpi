@@ -16,13 +16,15 @@ main:
 	bl wiringPiSetup    
 
 	// pinMode(pin, mode)
-	mov x0, gpio_pin
-	mov x1, gpio_mode
+	adr x0, gpio_pin
+	ldr x0, [x0]
+	adr x1, gpio_mode
+	ldr x1, [x1]
 	bl pinMode          
 
 	// initialize while_loop 
 	mov x19, xzr         // loop counter
-	mov x20, 5	    // max loops
+	mov x20, 5   	     // max loops
 	b while_loop
 
 	b exit
