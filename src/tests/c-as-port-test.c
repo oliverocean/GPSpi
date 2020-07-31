@@ -29,9 +29,37 @@ int main (void)
 	__asm("bl digitalWrite");
 	printf(" enabled!\n");
 
-	printf("delaying...");
-	delay(1000);
-	printf(" continuing...\n");
+	printf("start reading serial device...\n");
+
+	char* device = "/dev/ttyS0";
+	int baud = 9600;
+	int serial_port = serialOpen(device, baud);
+	char data;
+
+	if (serial_port < 0)
+	{
+	    perror("Unable to open serial device.\n");
+	    return 1;
+	}
+
+	int count = 0;
+
+	while (count < 10)
+	{
+	    if (serialDataAvail(serial_port))
+	    {	
+	        printf("data available.\n");
+		data = serialGetchar(serial_port);
+		printf("%c", data);
+	    }
+	    else 
+	    {
+	        printf("data not available.\n");
+	    }
+	    count++;
+	}
+
+	printf("done reading serial device...\n");
 
 	printf("> disabling txd...");
 	__asm("mov x0, 15"); // set pin
