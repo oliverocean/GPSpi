@@ -6,30 +6,37 @@
 #include <wiringPi.h>
 #include <wiringSerial.h>
 
+#define GPIO_LED 0 
 #define GPIO_TXD 15
 #define GPIO_RXD 16
+#define INPUT_MODE 0
+#define OUTPUT_MODE 1
+#define ALT5_MODE 2
+
+void blink_led(void);
 
 int main (void)
 {
-	printf("> start:\n");
+	printf("\n---[ Enable GPS Sensor ]---\n");
 
 	wiringPiSetup();
-	pinMode(GPIO_TXD, OUTPUT);
-	pinMode(GPIO_RXD, INPUT);
+	pinMode(GPIO_TXD, ALT5_MODE);
+	pinMode(GPIO_RXD, ALT5_MODE);
+	pinMode(GPIO_LED, OUTPUT_MODE);
 
-	printf("> enabling txd...");
-	__asm("mov x0, 15"); // set pin
-	__asm("mov x1, 1"); // set value HIGH
+	printf(" > Enabling TxD...");
+	__asm("mov x0, 15"); // select pin
+	__asm("mov x1, 1"); // set value HIGH (enable)
 	__asm("bl digitalWrite");
 	printf(" enabled!\n");
 
-	printf("> enabling rxd...");
-	__asm("mov x0, 16"); // set pin
-	__asm("mov x1, 1"); // set value HIGH
+	printf(" > Enabling RxD...");
+	__asm("mov x0, 16"); // select pin
+	__asm("mov x1, 1"); // set value HIGH (enable)
 	__asm("bl digitalWrite");
 	printf(" enabled!\n");
 
-	printf("start reading serial device...\n");
+	printf("\n---[ Read GPS Data ]---\n");
 
 	char* device = "/dev/ttyS0";
 	int baud = 9600;
@@ -42,38 +49,48 @@ int main (void)
 	    return 1;
 	}
 
-	int count = 0;
+	int line_count = 0;
 
-	while (count < 10)
+	while (line_count < 20)
 	{
 	    if (serialDataAvail(serial_port))
 	    {	
-	        printf("data available.\n");
 		data = serialGetchar(serial_port);
 		printf("%c", data);
+		if (data == 36) 
+		{ 
+		    line_count++; 
+		    blink_led();
+		}
 	    }
-	    else 
-	    {
-	        printf("data not available.\n");
-	    }
-	    count++;
 	}
 
-	printf("done reading serial device...\n");
+	printf("\n\n---[ Disable GPS Sensor ]---\n");
 
-	printf("> disabling txd...");
+	printf(" > Disabling TxD...");
 	__asm("mov x0, 15"); // set pin
-	__asm("mov x1, 0"); // set value LOW
+	__asm("mov x1, 0"); // set value LOW (disable)
 	__asm("bl digitalWrite");
 	printf(" disabled!\n");
 
-	printf("> disabling rxd...");
+	printf(" > Disabling RxD...");
 	__asm("mov x0, 16"); // set pin
-	__asm("mov x1, 0"); // set value LOW
+	__asm("mov x1, 0"); // set value LOW (disable)
 	__asm("bl digitalWrite");
 	printf(" disabled!\n");
 
-	printf("> done.\n");
+	printf("\n---[ Exit ]---\n\n");
 	
 	return 0;
+}
+
+void blink_led(void)
+{
+    __asm("mov x0, xzr"); // select pin
+    __asm("mov x1, 1"); // set value HIGH (enable)
+    __asm("bl digitalWrite");
+    delay(5);
+    __asm("mov x0, xzr"); // select pin
+    __asm("mov x1, xzr"); // set value LOW (disable)
+    __asm("bl digitalWrite");
 }
