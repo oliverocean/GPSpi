@@ -18,4 +18,4 @@ Gathers GPS data from a physical sensor and displays location information on a m
 ![MT3339 GPS Sensor](img/IMG_2563-450px.jpg)
 
 ### Notes
-Development currently in progress!</br>
+Development currently in progress.</br>
