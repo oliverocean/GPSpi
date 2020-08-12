@@ -11,5 +11,4 @@ Gathers GPS data from a physical sensor and displays location information on a m
 * GPS sensor: [MTK3339](https://learn.adafruit.com/adafruit-ultimate-gps/overview) (Adafruit) with external GPS antenna
 * User dashboard: [Blynk.io](https://docs.blynk.cc/) app
 
-### Notes
-Development currently in progress!</br>
+(Development currently in progress, updates soon)
