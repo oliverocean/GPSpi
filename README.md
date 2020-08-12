@@ -33,7 +33,7 @@ $GPRMC,9876543.000,A,4567.8901,N,012345.8765,W,0.12,345.67,123456,,,D*88
 ---
 
 ### Prototype B
-Gathers GPS data from a physical sensor and displays location information on a mobile app dashboard.
+Gathers GPS data from a physical sensor and displays location information on a mobile app dashboard.</br>
 *![- details & source code →](src/prototype_b/)*
 
 Usage:
