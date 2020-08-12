@@ -1,11 +1,10 @@
-**Prototype 01**</br>
-Gathers GPS data from a physical sensor and displays on a console.
+Prototype 01 of GPSpi gathers GPS data from a physical sensor and displays it on a console.
 
 ### Software
 * Written in C and assembly language
 * Uses the [ARMv8](https://developer.arm.com/documentation/den0024/a/an-introduction-to-the-armv8-instruction-sets) instruction set architecture
 * Assembly language instructions embedded into C code using [asm](https://gcc.gnu.org/onlinedocs/gcc/Using-Assembly-Language-with-C.html), a C language extension
-* UART serial communication enabled using [wiringPi](http://wiringpi.com/)
+* UART serial communication enabled using the [wiringPi](http://wiringpi.com/) library
 
 ### Configuration
 * Host machine: [Raspberry Pi 3](https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md) (model B+)
@@ -16,6 +15,7 @@ Gathers GPS data from a physical sensor and displays on a console.
 
 ### Notes
 * WiringPi is a well documented, nicely designed, easy to use library but it has been deprecated; future prototypes will not include this library
+* After extensive testing, WiringPi does not appear to work with Arch Linux, thus this prototype uses Ubuntu Linux
 * WiringPi includes a tool called "gpio", which is helpful for troubleshooting (basic usage included below)
 
 ### Usage
