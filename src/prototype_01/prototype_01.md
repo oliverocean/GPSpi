@@ -1,5 +1,5 @@
-### Summary
-GPSpi Prototype 01 gathers GPS data from a physical sensor and displays it on a console.
+### GPSpi: prototype 1
+Gathers GPS data from a physical sensor and displays it on a console.
 
 ### Software
 * Written in C and assembly language
@@ -12,7 +12,7 @@ GPSpi Prototype 01 gathers GPS data from a physical sensor and displays it on a 
 * Operating system: Ubuntu Server 18.04 (64-bit) for Raspberry Pi, an [AArch64](https://archlinuxarm.org/packages/aarch64/linux-aarch64) package (64-bit OS needed for ARMv8 ISA)
 * GPS sensor: [MTK3339](https://learn.adafruit.com/adafruit-ultimate-gps/overview) (Adafruit) with external GPS antenna
 
-![MT3339 GPS Sensor](img/IMG_2563-450px.jpg)
+![MT3339 GPS Sensor](../../img/IMG_2563-450px.jpg)
 
 ### Notes
 * WiringPi is a well documented, nicely designed, easy to use library but it has been deprecated; future prototypes will not include this library
