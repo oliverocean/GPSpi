@@ -58,7 +58,7 @@ int main (void)
 	    {	
 		data = serialGetchar(serial_port);
 		printf("%c", data);
-		if (data == 36) 
+		if (data == 36) // this is the symbol '$'; each line of GPS data starts with '$'
 		{ 
 		    line_count++; 
 		    blink_led();
