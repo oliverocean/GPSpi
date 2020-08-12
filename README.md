@@ -1,10 +1,11 @@
-## GPSpi
+### GPSpi
 A simple, end-to-end, GPS location tracking system.
 
 ---
 
 ### Prototype A
-Gathers GPS data from a physical sensor and displays it on a console. (![shortcut →](src/prototype_a/))
+Gathers GPS data from a physical sensor and displays it on a console.</br>
+*![- details & source code →](src/prototype_a/)*
 
 ![MT3339 GPS Sensor](img/IMG_2563-450px.jpg)
 
@@ -32,7 +33,8 @@ $GPRMC,9876543.000,A,4567.8901,N,012345.8765,W,0.12,345.67,123456,,,D*88
 ---
 
 ### Prototype B
-Gathers GPS data from a physical sensor and displays location information on a mobile app dashboard. (![shortcut →](src/prototype_b/))
+Gathers GPS data from a physical sensor and displays location information on a mobile app dashboard.
+*![- details & source code →](src/prototype_b/)*
 
 Usage:
 ~~~
