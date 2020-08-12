@@ -19,4 +19,3 @@ Gathers GPS data from a physical sensor and displays location information on a m
 
 ### Notes
 Development currently in progress!</br>
-MVP prototype completion expected 31-Jul.
