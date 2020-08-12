@@ -1,3 +1,16 @@
+## Prototype v01
+
+description here
+
+### Features
+
+* feature 1
+* feature 2
+* feature 3
+
+### Usage
+~~~
+sudo ./gpio-asm
 
 ---[ Enable GPS Sensor ]---
  > Enabling TxD... enabled!
@@ -35,4 +48,4 @@ $GPVTG,123.45,T,,M,0.78,N,0.91,K,D*2C
  > Disabling RxD... disabled!
 
 ---[ Exit ]---
-
+~~~
