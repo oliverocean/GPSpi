@@ -57,10 +57,12 @@ $GPRMC,9876543.000,A,4567.8901,N,012345.8765,W,0.12,345.67,123456,,,D*88
 - describe initial testing process with multimeter to verify correctly soldered headers on gps board
 - describe initial testing process with usb/serial cable and gpsd including GPS antenna placement (line of sight to sky) - link to external references as needed
 - document physical rpi breakout board and breadboard wiring configuration (perhaps a Fritizing diagram with all pins, led, kill switch, etc).
-- explain serial/console configuration (systemctl masking)
+- explain serial/console configuration (systemctl masking of console on tty0, systemctl disabling gpsd, etc)
 - explain boot process pitfalls and kill switch usage
 - explain how to install wiringPi and the gpio tool (and any other GPS related tools/documentation - external links as needed)
 - explain purpose of the included manual tests (serial, led)
+- future features that could be added to this prototype (configurable number of lines to pull down, simple parsing of location data, automated logging, etc)
+- describe possible issues/bugs (conflicts with gpsd, other scripts and libraries may modify gpio pin states, etc)
 
 ---
 
