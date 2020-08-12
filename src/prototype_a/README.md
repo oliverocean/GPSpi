@@ -1,5 +1,5 @@
 ### GPSpi
-Prototype 1: gathers GPS data from a physical sensor and displays it on a console.
+Prototype A: gathers GPS data from a physical sensor and displays it on a console.
 
 ### Software
 * Written in C and assembly language
@@ -21,7 +21,7 @@ Prototype 1: gathers GPS data from a physical sensor and displays it on a consol
 
 ### Usage
 ~~~
-sudo ./gpio-asm
+% sudo ./gpio-asm
 
 ---[ Enable GPS Sensor ]---
  > Enabling TxD... enabled!
