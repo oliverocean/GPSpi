@@ -4,7 +4,7 @@ A simple, end-to-end, GPS location tracking system.
 ---
 
 ### Prototype A
-Gathers GPS data from a physical sensor and displays it on a console.</br>
+Gathers GPS data from a physical sensor and displays as character strings on a console.</br>
 *![- details & source code →](src/prototype_a/)*
 
 ![MT3339 GPS Sensor](img/IMG_2563-450px.jpg)
