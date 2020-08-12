@@ -4,7 +4,9 @@ A simple, end-to-end, GPS location tracking system.
 ![MT3339 GPS Sensor](img/IMG_2563-450px.jpg)
 
 ### Prototype A
-![Prototype A](src/prototype_a/) gathers GPS data from a physical sensor and displays it on a console.
+Gathers GPS data from a physical sensor and displays it on a console. (![direct link](src/prototype_a/))
+
+Usage:
 ~~~
 % sudo ./gpio-asm
 
@@ -26,9 +28,12 @@ $GPRMC,9876543.000,A,4567.8901,N,012345.8765,W,0.12,345.67,123456,,,D*88
 ~~~
 
 ### Prototype B
-![Prototype B](src/prototype_b/) gathers GPS data from a physical sensor and displays location information on a mobile app dashboard.
+Gathers GPS data from a physical sensor and displays location information on a mobile app dashboard. (![direct link](src/prototype_b/))
 
-(TBD screenshots)
+Usage:
+~~~
+TBD
+~~~
 
 ### Notes
 Prototype B development currently in progress!</br>
