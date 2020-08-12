@@ -49,17 +49,7 @@ main:
 	ldr w1, [x1]
  
  	// read serial data, print out
-	adr x0, msg_read_data
-	bl printf
-	sub sp, sp, 16 // make room on the stack
-	str xzr, [sp] // clean up memory contents where input will be received
-	adr x0, input_format // set x0 with address of input_format for scanf()
-	mov x1, sp // set x1 with address for scanf() to read 
-	bl scanf
-	ldr x1, [sp] // load contents of sp into x1
-	add sp, sp, 16 // reset stack pointer
-	adr x0, msg_output_data
-	bl printf
+	// @to-do
 
 	// close TXD port
 	adr x0, msg_port_close
@@ -108,7 +98,7 @@ set_high:	  .int   1
 
 time_delay:	  .int   1000 // milliseconds
 
-input_format:      .string "%8s" // limit to 1 char
+//input_format:      .string "%8s" // limit to 1 char
 
 /* ---------------[ EOF ]--------------- */
 		.end
