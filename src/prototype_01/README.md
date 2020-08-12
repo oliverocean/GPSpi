@@ -1,5 +1,5 @@
-### GPSpi: prototype 1
-Gathers GPS data from a physical sensor and displays it on a console.
+### GPSpi
+Prototype 1: gathers GPS data from a physical sensor and displays it on a console.
 
 ### Software
 * Written in C and assembly language
