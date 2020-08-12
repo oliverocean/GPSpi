@@ -52,8 +52,7 @@ int main (void)
 	int line_count = 0;
 
 	// change the line count to collect more data
-	//while (1)
-	while (line_count < 20)
+	while (line_count < 25)
 	{
 	    if (serialDataAvail(serial_port))
 	    {	
