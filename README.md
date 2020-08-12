@@ -41,5 +41,5 @@ Usage:
 TBD
 ~~~
 
-### Notes
+Notes:
 Prototype B development currently in progress!</br>
