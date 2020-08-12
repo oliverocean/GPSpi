@@ -1,4 +1,4 @@
-// gcc -o foo foo.c -lwiringPi -lcrypt -lpthread -lrt -lm
+// compile: gcc -o foo foo.c -lwiringPi -lcrypt -lpthread -lrt -lm
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -51,6 +51,8 @@ int main (void)
 
 	int line_count = 0;
 
+	// change the line count to collect more data
+	//while (1)
 	while (line_count < 20)
 	{
 	    if (serialDataAvail(serial_port))
