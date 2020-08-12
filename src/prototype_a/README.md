@@ -53,7 +53,8 @@ $GPRMC,9876543.000,A,4567.8901,N,012345.8765,W,0.12,345.67,123456,,,D*88
 
 ## Things to be documented next!
 - add a features section above (high level)
-- perhaps add a "findings" section to explain reasons for what was included vs what was pushed to next prototype version
+- add a "requirements" section explaining reasons for including certain features (ie: course project requirements)
+- add a "findings" section explaining reasons for not including certain features and/or for modifying initial plans (deadlines)
 - describe initial testing process with multimeter to verify correctly soldered headers on gps board
 - describe initial testing process with usb/serial cable and gpsd including GPS antenna placement (line of sight to sky) - link to external references as needed
 - document physical rpi breakout board and breadboard wiring configuration (perhaps a Fritizing diagram with all pins, led, kill switch, etc).
