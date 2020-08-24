@@ -1,6 +1,8 @@
 ### GPSpi Prototype A
 Gathers GPS data from a physical sensor and displays as character strings on a console.
 
+![Prototype A](img/IMG_2703-450px.jpg)
+
 ### Features
 - Status LED: "actively receiving data"
 - Physical reset/kill switch
