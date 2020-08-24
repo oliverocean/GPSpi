@@ -7,7 +7,7 @@ A simple, end-to-end, GPS location tracking system.
 Gathers GPS data from a physical sensor and displays as character strings on a console.</br>
 *![- details & source code →](src/prototype_a/)*
 
-![MT3339 GPS Sensor](img/IMG_2563-450px.jpg)
+> ![MT3339 GPS Sensor](img/IMG_2563-450px.jpg)
 
 Usage:
 ~~~
@@ -40,5 +40,3 @@ Usage:
 ~~~
 TBD
 ~~~
-
-(Prototype B development currently in progress)
