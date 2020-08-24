@@ -56,7 +56,21 @@ $GPRMC,9876543.000,A,4567.8901,N,012345.8765,W,0.12,345.67,123456,,,D*88
 ~~~
 
 ### How it works
-- *(step by step data path)*
+**Space Vehicle to GPS Sensor**</br>
+- GPS [satellites](https://en.wikipedia.org/wiki/Global_Positioning_System#Space_segment) broadcast RF [signals](https://en.wikipedia.org/wiki/Global_Positioning_System#More_detailed_description) which are received by the GPS sensor
+- The GPS sensor has built in firmware which parses RF signals into the [NMEA](https://en.wikipedia.org/wiki/NMEA_0183) protocol
+- NMEA data is available via Tx/Rx pins of the GPS sensor, formatted as "sentences", each starting with a '$' delimiter
+
+**GPS Sensor to Raspberry Pi**</br>
+- Tx/Rx pins of the GPS sensor are physically wired to GPIO pins on the Raspberry Pi
+- Linux serial communications *---> placeholder: add details of kernal/user space i/o restrictions*
+- *placeholder: UART details*
+- GPIO pins on the Raspberry Pi can be accessed using the Wiring Pi library
+- *placeholde: next steps*
+
+---
+
+## NOTE: draft/in-progress/incomplete documentation below 
 
 ### Hardware Setup
 
@@ -82,7 +96,6 @@ any other GPS related tools/documentation
 ### Testing 
 - Hardware: initial testing process with usb/serial cable, gpsd including GPS antenna placement (line of sight to sky) - link to external references as needed
 - Software: explain purpose of the included manual tests (serial, led)
-
 
 ### Findings
 - reasons for including/excluding certain features (course project requirements) and/or for modifying initial plans, deadlines, etc)
