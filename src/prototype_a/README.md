@@ -4,8 +4,8 @@ Gathers GPS data from a physical sensor and displays as character strings on a c
 > ![Prototype A](/img/IMG_2617-450px.jpg)
 
 ### Features
-- Status LED: "actively receiving data"
-- Physical reset/kill switch
+- Status LED: "actively receiving data" (blinks for each NMEA sentence)
+- Physical kill switch (required for reset and system booting)
 
 ### Components
 - Host machine: [Raspberry Pi 3](https://www.raspberrypi.org/documentation/hardware/raspberrypi/README.md) (model B+)
